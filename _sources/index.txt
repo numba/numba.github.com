@@ -3,9 +3,10 @@ numba is a NumPy aware dynamic compiler for Python.  It creates LLVM bit-code fr
 Example
 =======
 
-.. code-block: python
+.. code-block:: python
 
-   from numba.types import double
+   from numba import double
+   from numba.decorators import numba_compile
 
    @numba_compile(arg_types=[double[:,:]], ret_type = double)
    def sum2d(arr):
