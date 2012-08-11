@@ -6,9 +6,9 @@ Example
 .. code-block:: python
 
    from numba import double
-   from numba.decorators import numba_compile
+   from numba.decorators import jit
 
-   @numba_compile(arg_types=[double[:,:]], ret_type = double)
+   @jit(arg_types=[double[:,:]], ret_type = double)
    def sum2d(arr):
        M, N = arr.shape
        result = 0.0
