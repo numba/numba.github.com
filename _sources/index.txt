@@ -27,6 +27,8 @@ QuickStart
 
    git clone https://github.com/numba/numba.git
    cd numba 
+   git submodule init 
+   git submodule update
    python setup.py install
 
 This project is maintained by `Continuum Analytics <http://www.continuum.io>`_
