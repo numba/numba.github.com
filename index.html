@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1',
+        VERSION:     '0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -153,7 +153,7 @@
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">double</span>
 <span class="kn">from</span> <span class="nn">numba.decorators</span> <span class="kn">import</span> <span class="n">jit</span>
 
-<span class="nd">@jit</span><span class="p">(</span><span class="n">arg_types</span><span class="o">=</span><span class="p">[</span><span class="n">double</span><span class="p">[:,:]],</span> <span class="n">ret_type</span> <span class="o">=</span> <span class="n">double</span><span class="p">)</span>
+<span class="nd">@jit</span><span class="p">(</span><span class="n">argtypes</span><span class="o">=</span><span class="p">[</span><span class="n">double</span><span class="p">[:,:]],</span> <span class="n">restype</span> <span class="o">=</span> <span class="n">double</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">sum2d</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="n">M</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mf">0.0</span>

@@ -8,7 +8,7 @@ Example
    from numba import double
    from numba.decorators import jit
 
-   @jit(arg_types=[double[:,:]], ret_type = double)
+   @jit(argtypes=[double[:,:]], restype = double)
    def sum2d(arr):
        M, N = arr.shape
        result = 0.0
