@@ -150,10 +150,9 @@
   <p>numba is a NumPy aware dynamic compiler for Python.  It creates LLVM bit-code from Python syntax and then creates a wrapper around that bitcode to call from Python</p>
 <div class="section" id="example">
 <h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">double</span>
-<span class="kn">from</span> <span class="nn">numba.decorators</span> <span class="kn">import</span> <span class="n">jit</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">autojit</span>
 
-<span class="nd">@jit</span><span class="p">(</span><span class="n">argtypes</span><span class="o">=</span><span class="p">[</span><span class="n">double</span><span class="p">[:,:]],</span> <span class="n">restype</span> <span class="o">=</span> <span class="n">double</span><span class="p">)</span>
+<span class="nd">@autojit</span>
 <span class="k">def</span> <span class="nf">sum2d</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="n">M</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -168,14 +167,16 @@
 <h1>QuickStart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><ul class="simple">
-<li>Get llvmpy at <a class="reference external" href="http://www.llvmpy.org">http://www.llvmpy.org</a></li>
+<li>Get and install llvmpy at <a class="reference external" href="http://www.llvmpy.org">http://www.llvmpy.org</a></li>
+<li>Get and install Meta</li>
 <li>Get and install numba</li>
 </ul>
 </div></blockquote>
-<div class="highlight-bash"><div class="highlight"><pre>git clone https://github.com/numba/numba.git
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://github.com/numba/Meta.git
+<span class="nb">cd </span>meta
+python setup.py install
+git clone https://github.com/numba/numba.git
 <span class="nb">cd </span>numba
-git submodule init
-git submodule update
 python setup.py install
 </pre></div>
 </div>
