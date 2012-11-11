@@ -2,4 +2,5 @@
 Links to Documenation
 ==================================
 
+* `Version 0.3 <http://numba.githbu.com/numba-doc/0.9/index.html>`_ 
 * `Development <http://numba.github.com/numba-doc/dev/index.html>`_
