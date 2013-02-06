@@ -2,6 +2,7 @@
 Downloads
 =============
 
+* Version `0.6.0 <http://pypi.python.org/packages/source/n/numba/numba-0.6.0.tar.gz#md5=be940f9843438f3c9718432d291f41ad>`_ from PyPI
 * Version `0.5.0 <http://pypi.python.org/packages/source/n/numba/numba-0.5.0.tar.gz#md5=9ae207fd4ff1810e7349dc343f6a8607>`_ from PyPI
 * Version `0.3 <http://pypi.python.org/packages/source/n/numba/numba-0.3.tar.gz#md5=5a6b0a8737d4e959b2ae27139ed1858e>`_ from PyPI
 
