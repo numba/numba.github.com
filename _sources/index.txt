@@ -5,7 +5,7 @@ Example
 
 .. code-block:: python
 
-   from numba import autojit 
+   from numba import autojit
 
    @autojit
    def sum2d(arr):
