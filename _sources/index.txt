@@ -21,7 +21,7 @@ QuickStart
 
 The easiest way to get started with Numba is to either:
 
- 1) download the free Anaconda CE from here: http://continuum.io/downloads.html
+ 1) download Anaconda, the free Python distribution, from here: http://continuum.io/downloads.html
  2) Get a Wakari account and interact on-line:  http://wakari.io
 
 If you want to build things yourself, then this can help get you started: 
