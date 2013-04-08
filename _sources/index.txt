@@ -1,48 +1,104 @@
-numba is a NumPy aware dynamic compiler for Python.  It creates LLVM bit-code from Python syntax and then creates a wrapper around that bitcode to call from Python
+********************
+Numba
+********************
+
+Numba is an just-in-time specializing compiler which compiles
+annotated Python and NumPy code to LLVM (through decorators). Its goal
+is to seamlessly integrate with the Python scientific software stack
+and produce optimized native code, as well as integrate with native foreign
+languages.
 
 Example
 =======
 
 .. code-block:: python
 
-   from numba import autojit
+    from numba import autojit
 
-   @autojit
-   def sum2d(arr):
-       M, N = arr.shape
-       result = 0.0
-       for i in range(M):
-           for j in range(N):
-               result += arr[i,j]
-       return result
+    @autojit
+    def sum2d(arr):
+        M, N = arr.shape
+        result = 0.0
+        for i in range(M):
+            for j in range(N):
+                result += arr[i,j]
+        return result
 
-QuickStart
-==========
+More examples: `examples <http://numba.pydata.org/numba-doc/dev/doc/examples.html>`_.
 
-The easiest way to get started with Numba is to either:
+Documentation
+=============
 
- 1) Download Anaconda (a free Python distribution) from here: http://continuum.io/downloads.html
- 2) Get a Wakari account and interact on-line:  http://wakari.io
+* http://numba.pydata.org/doc.html
 
-If you want to build things yourself, then this can help get you started: 
+Source and Downloads
+====================
 
- * Get and install llvmpy at http://www.llvmpy.org
- * Get and install Meta
- * Get and install numba
+* Github: https://github.com/numba/numba
 
 .. code-block:: bash
 
-   git clone https://github.com/numba/Meta.git
-   cd meta
-   python setup.py install
-   git clone https://github.com/numba/numba.git
-   cd numba 
-   python setup.py install
+    $ git clone git://github.com/numba/numba.git
 
-This project is maintained by `Continuum Analytics <http://www.continuum.io>`_
+.. _install_frontpage:
+
+For tarballs see:
 
 .. toctree::
-   :hidden:
+    :titlesonly:
+    :maxdepth: 2
 
-   doc
-   download
+    download.rst
+
+.. :ref:`Download Numba <download>`
+
+Installing
+==========
+
+The easiest way to install numba and get updates is by using the Anaconda
+Distribution: http://continuum.io/downloads.html
+
+If you have anaconda installed already:
+
+.. code-block:: bash
+
+    $ conda install numba
+
+or
+
+.. code-block:: bash
+
+   $ conda update numba
+
+For custom python environments see:
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 1
+
+    install.rst
+
+Mailing Lists
+=============
+
+Join the numba mailing list numba-users@continuum.io :
+
+    * https://groups.google.com/a/continuum.io/d/forum/numba-users
+
+Some old archives are at:
+
+    * http://librelist.com/browser/numba/
+
+Website
+=======
+
+See if our sponsor can help you (which can help this project):
+
+    * http://www.continuum.io
+    * http://numba.pydata.org
+
+Continuous Integration
+======================
+
+* https://travis-ci.org/numba/numba
+

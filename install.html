@@ -1,7 +1,5 @@
 
 
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -10,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Index &mdash; numba</title>
+    <title>Custom Python Environments &mdash; numba</title>
     
     <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -28,7 +26,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="numba" href="index.html" /> 
+    <link rel="top" title="numba" href="index.html" />
+    <link rel="prev" title="Downloads" href="download.html" /> 
   </head>
   <body>
     <div class="header-wrapper">
@@ -148,11 +147,38 @@
         <div class="bodywrapper">
           <div class="body">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="custom-python-environments">
+<span id="custom"></span><h1>Custom Python Environments<a class="headerlink" href="#custom-python-environments" title="Permalink to this headline">¶</a></h1>
+<p>If you&#8217;re not using anaconda, you will need LLVM with RTTI enabled:</p>
+<ul class="simple">
+<li>Compile LLVM 3.2</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>wget http://llvm.org/releases/3.2/llvm-3.2.src.tar.gz
+<span class="nv">$ </span>tar zxvf llvm-3.2.src.tar.gz
+<span class="nv">$ </span>./configure --enable-optimized
+<span class="nv">$ </span><span class="c"># Be sure your compiler architecture is same as version of Python you will use</span>
+<span class="nv">$ </span><span class="c">#  e.g. -arch i386 or -arch x86_64.  It might be best to be explicit about this.</span>
+<span class="nv">$ </span>make install
+</pre></div>
+</div>
+<ul class="simple">
+<li>Installing Numba</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git clone https://github.com/numba/numba.git
+<span class="nv">$ </span><span class="nb">cd </span>numba
+<span class="nv">$ </span>pip install -r requirements.txt
+<span class="nv">$ </span>python setup.py install
+</pre></div>
+</div>
+<p>or simply</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install numba
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><strong>NOTE:</strong> Make sure you install <em>distribute</em> instead of setuptools. Using setuptools</dt>
+<dd>may mean that source files do not get cythonized and may result in an
+error during installation.</dd>
+</dl>
 </div>
 
 
