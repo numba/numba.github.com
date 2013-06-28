@@ -14,7 +14,7 @@ If you're not using anaconda, you will need LLVM with RTTI enabled:
     $ ./configure --enable-optimized
     $ # Be sure your compiler architecture is same as version of Python you will use
     $ #  e.g. -arch i386 or -arch x86_64.  It might be best to be explicit about this.
-    $ make install
+    $ REQUIRES_RTTI=1 make install
 
 * Installing Numba
 
