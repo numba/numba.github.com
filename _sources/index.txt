@@ -24,7 +24,7 @@ Example
                 result += arr[i,j]
         return result
 
-More examples: `examples <http://numba.pydata.org/numba-doc/dev/doc/examples.html>`_.
+More examples: `examples <http://numba.pydata.org/numba-doc/dev/examples.html>`_.
 
 Documentation
 =============
