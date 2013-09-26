@@ -4,6 +4,7 @@ Links to Documenation
 
 Releases:
 
+* `Version 0.11 <http://numba.github.com/numba-doc/0.11/index.html>`_
 * `Version 0.10 <http://numba.github.com/numba-doc/0.10/index.html>`_
 * `Version 0.9 <http://numba.github.com/numba-doc/0.9/index.html>`_
 * `Version 0.8 <http://numba.github.com/numba-doc/0.8/index.html>`_
