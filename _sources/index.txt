@@ -13,9 +13,12 @@ Example
 
 .. code-block:: python
 
-    from numba import autojit
+    from numba import jit
+    from numpy import arange
 
-    @autojit
+    # jit decorator tells Numba to compile this function.
+    # The argument types will be inferred by Numba when function is called.
+    @jit
     def sum2d(arr):
         M, N = arr.shape
         result = 0.0
@@ -23,6 +26,9 @@ Example
             for j in range(N):
                 result += arr[i,j]
         return result
+
+    a = arange(9).reshape(3,3)
+    print(sum2d(a))
 
 More examples: `examples <http://numba.pydata.org/numba-doc/dev/examples.html>`_.
 
