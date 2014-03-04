@@ -4,7 +4,7 @@ Links to Documenation
 
 Releases:
 
-* `Version 0.12.1 <http://numba.pydata.org/numba-doc/0.12.1/index.html>`_
+* `Version 0.12.2 <http://numba.pydata.org/numba-doc/0.12.2/index.html>`_
 * `Version 0.11 <http://numba.github.com/numba-doc/0.11/index.html>`_
 * `Version 0.10 <http://numba.github.com/numba-doc/0.10/index.html>`_
 * `Version 0.9 <http://numba.github.com/numba-doc/0.9/index.html>`_
