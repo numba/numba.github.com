@@ -1,5 +1,5 @@
 
-Links to Documenation
+Links to Documentation
 ==================================
 
 Releases:
