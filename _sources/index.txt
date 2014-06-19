@@ -2,11 +2,9 @@
 Numba
 ********************
 
-Numba is an just-in-time specializing compiler which compiles
-annotated Python and NumPy code to LLVM (through decorators). Its goal
-is to seamlessly integrate with the Python scientific software stack
-and produce optimized native code, as well as integrate with native foreign
-languages.
+Numba gives you the power to speed up your applications with high performance functions written directly in Python.  With a few annotations, array-oriented and math-heavy Python code can be just-in-time compiled to native machine instructions, similar in performance to C, C++ and Fortran, without having to switch languages or Python interpreters.
+
+Numba works by generating optimized machine code using the LLVM compiler infrastructure at import time, runtime, or statically (using the included pycc tool).  Numba supports compilation of Python to run on either CPU or GPU hardware, and is designed to integrate with the Python scientific software stack.
 
 Example
 =======

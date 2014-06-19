@@ -105,10 +105,10 @@
 
 <div class="sidebarblock">
     <h3>Releases</h3>
-    <strong>Stable:</strong> 0.13.2 &ndash; June&nbsp;2014<br/>
+    <strong>Stable:</strong> 0.13 &ndash; March&nbsp;2014<br/>
     <a href="download.html">Downloads</a><br>
     <a href="doc.html">Documentation</a><br>
-    <a href="http://numba.pydata.org/numba-doc/0.13.2/releases.html">Release Notes</a>
+    <a href="http://numba.pydata.org/numba-doc/0.13/releases.html">Release Notes</a>
 
     <div>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -161,10 +161,10 @@
 
 <div class="sidebarblock">
     <h3>Releases</h3>
-    <strong>Stable:</strong> 0.13.2 &ndash; June&nbsp;2014<br/>
+    <strong>Stable:</strong> 0.13 &ndash; March&nbsp;2014<br/>
     <a href="download.html">Downloads</a><br>
     <a href="doc.html">Documentation</a><br>
-    <a href="http://numba.pydata.org/numba-doc/0.13.2/releases.html">Release Notes</a>
+    <a href="http://numba.pydata.org/numba-doc/0.13/releases.html">Release Notes</a>
 
     <div>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -211,11 +211,8 @@
                   
   <div class="section" id="numba">
 <h1>Numba<a class="headerlink" href="#numba" title="Permalink to this headline">¶</a></h1>
-<p>Numba is an just-in-time specializing compiler which compiles
-annotated Python and NumPy code to LLVM (through decorators). Its goal
-is to seamlessly integrate with the Python scientific software stack
-and produce optimized native code, as well as integrate with native foreign
-languages.</p>
+<p>Numba gives you the power to speed up your applications with high performance functions written directly in Python.  With a few annotations, array-oriented and math-heavy Python code can be just-in-time compiled to native machine instructions, similar in performance to C, C++ and Fortran, without having to switch languages or Python interpreters.</p>
+<p>Numba works by generating optimized machine code using the LLVM compiler infrastructure at import time, runtime, or statically (using the included pycc tool).  Numba supports compilation of Python to run on either CPU or GPU hardware, and is designed to integrate with the Python scientific software stack.</p>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">jit</span>
