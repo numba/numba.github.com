@@ -8,18 +8,17 @@
     <meta charset="utf-8" />
     
     <title>Numba &mdash; Numba</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     
+
 <link rel="stylesheet" href="_static/css/basicstrap-base.css" type="text/css" />
-<link rel="stylesheet" href="_static/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
 <link rel="stylesheet" href="_static/css/font-awesome.min.css">
-<!--[if IE 7]>
-<link rel="stylesheet" href="_static/css/font-awesome-ie7.min.css">
-<![endif]-->
+
 <style type="text/css">
   body {
     padding-top: 60px;
@@ -27,9 +26,9 @@
   }
 }
 </style>
-<link rel="stylesheet" href="_static/basicstrap.css" type="text/css" />
+
+<link rel="stylesheet" href="_static/css/basicstrap.css" type="text/css" />
 <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-<link rel="stylesheet" href="_static/css/bootstrap-responsive.min.css" type="text/css" />
     
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
@@ -40,28 +39,19 @@
             HAS_SOURCE:  true
   };
 </script>
-<script type="text/javascript" src="_static/js/jquery.min.js"></script>
-<script type="text/javascript" src="_static/underscore.js"></script>
-<script type="text/javascript" src="_static/doctools.js"></script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript" src="_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="_static/js/basicstrap.js"></script>
 <script type="text/javascript">
-  $(document).ready(function(){
-    $('.show-sidebar').click(function(e) {
-       e.preventDefault();
-       if ($(".show-sidebar").html() == "Open Table Of Contents") {
-          $('.for-mobile').removeClass('hidden-phone');
-          $(".show-sidebar").html("Close Table Of Contents");
-       } else {
-          $(".show-sidebar").html("Open Table Of Contents");
-       }
-    });
-  });
 </script>
     <link rel="top" title="Numba" href="#" />
     <link rel="next" title="Downloads" href="download.html" /> 
   </head>
-  <body>
+  <body role="document">
     <div class="navbar navbar-fixed-top ">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -90,69 +80,11 @@
     <!-- container -->
     <div class="container-fluid">
 
-
-      
-      <div class="row-fluid hidden-desktop hidden-tablet">
-      
-<div class="span2 ">
-  <a class="visible-phone btn btn-small show-sidebar" data-toggle="collapse" data-target=".for-mobile">Open Table Of Contents</a>
-  <div class="for-mobile sidebar hidden-phone">
-<div class="sidebarblock">
-    <center>
-        <img src="_static/continuum_sponsor.png"/>
-    </center>
-</div>
-
-<div class="sidebarblock">
-    <h3>Releases</h3>
-    <strong>Stable:</strong> 0.14 &ndash; Sept&nbsp;2014<br/>
-    <a href="download.html">Downloads</a><br>
-    <a href="doc.html">Documentation</a><br>
-    <a href="http://numba.pydata.org/numba-doc/0.14/releases.html">Release Notes</a>
-
-    <div>
-        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-        <g:plusone size="medium" annotation="none"></g:plusone>
-    </div>
-</div>
-
-<div class="sidebarblock">
-<h3>Links</h3>
-
-  <ul class="simple">
-    <li><a class="reference external" href="https://github.com/numba/numba/issues">
-            Issue tracker</a></li>
-    <li>Mailing lists:<br/><span style="padding-left: 1em;">
-        <a class="reference external" href="https://groups.google.com/a/continuum.io/forum/#!forum/numba-users">
-            User</a>
-        </li></span>
-  </ul>
-</div>
-
-<div class="sidebarblock">
-  <h3>Development</h3>
-  <ul class="simple">
-    <li><a class="reference external"
-    href="https://github.com/numba/numba/zipball/master">Download
-  <strong>ZIP File</strong></a></li>
-    <li><a class="reference external"
-    href="https://github.com/numba/numba/tarball/master">Download
-  <strong>TAR Ball</strong></a></li>
-    <li><a class="reference external"
-    href="https://github.com/numba/numba">View on <strong>GitHub</strong></a></li>
-  </ul>
-</div>
-
-  </div>
-</div>
-      </div>
-      
-
       <!-- row -->
-      <div class="row-fluid">
+      <div class="row">
          
-<div class="span2 visible-desktop visible-tablet">
-  <div class=" sidebar hidden-phone">
+<div class="col-md-2 hidden-xs">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
 <div class="sidebarblock">
     <center>
         <img src="_static/continuum_sponsor.png"/>
@@ -161,10 +93,10 @@
 
 <div class="sidebarblock">
     <h3>Releases</h3>
-    <strong>Stable:</strong> 0.14 &ndash; Sept&nbsp;2014<br/>
+    <strong>Stable:</strong> 0.15.1 &ndash; Oct&nbsp;2014<br/>
     <a href="download.html">Downloads</a><br>
     <a href="doc.html">Documentation</a><br>
-    <a href="http://numba.pydata.org/numba-doc/0.14/releases.html">Release Notes</a>
+    <a href="http://numba.pydata.org/numba-doc/0.15.1/releases.html">Release Notes</a>
 
     <div>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -203,8 +135,8 @@
 </div> 
         
 
-        <div class="span10">
-          <div class="document">
+        <div class="col-md-10">
+          <div class="document" role="main">
             <div class="documentwrapper">
               <div class="bodywrapper">
                 <div class="body">
@@ -319,12 +251,14 @@ Distribution: <a class="reference external" href="http://continuum.io/downloads.
       </div><!-- /row -->
 
       <!-- row -->
-      <div class="row-fluid">
-<div class="related navbar ">
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
-    <ul class="nav pull-right">
-      
-        <li><a href="#">Home</a></li> 
+    <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+    </ul>
+    <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+       
       
     </ul>
   </div>
@@ -332,9 +266,9 @@ Distribution: <a class="reference external" href="http://continuum.io/downloads.
       </div><!-- /row -->
 
       <!-- footer -->
-      <footer>
+      <footer role="contentinfo">
           &copy; Copyright Continuum Analytics (2012).
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.
       </footer>
       <!-- /footer -->
 
