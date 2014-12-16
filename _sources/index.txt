@@ -62,7 +62,7 @@ Installing
 The easiest way to install numba and get updates is by using the Anaconda
 Distribution: http://continuum.io/downloads.html
 
-If you have anaconda installed already:
+If you have Anaconda installed already:
 
 .. code-block:: bash
 
@@ -74,32 +74,26 @@ or
 
    $ conda update numba
 
-For custom python environments see:
-
-.. toctree::
-    :titlesonly:
-    :maxdepth: 1
-
-    install.rst
+For custom python environments see the `README on Github <https://github.com/numba/numba#custom-python-environments>`_.
 
 Mailing Lists
 =============
 
 Join the numba mailing list numba-users@continuum.io :
 
-    * https://groups.google.com/a/continuum.io/d/forum/numba-users
+* https://groups.google.com/a/continuum.io/d/forum/numba-users
 
 Some old archives are at:
 
-    * http://librelist.com/browser/numba/
+* http://librelist.com/browser/numba/
 
 Website
 =======
 
 See if our sponsor can help you (which can help this project):
 
-    * http://www.continuum.io
-    * http://numba.pydata.org
+* http://www.continuum.io
+* http://numba.pydata.org
 
 Continuous Integration
 ======================
