@@ -28,7 +28,7 @@ Example
     a = arange(9).reshape(3,3)
     print(sum2d(a))
 
-More examples: `examples <http://numba.pydata.org/numba-doc/dev/examples.html>`_.
+More examples: `examples <http://numba.pydata.org/numba-doc/dev/user/examples.html>`_.
 
 Documentation
 =============
