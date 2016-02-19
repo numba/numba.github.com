@@ -2,6 +2,10 @@
 Links to Documentation
 ==================================
 
+Latest Stable Release:
+
+http://numba.pydata.org/numba-doc/latest/index.html
+
 Releases:
 
 * `Version 0.23.1 <http://numba.pydata.org/numba-doc/0.23.1/index.html>`_
