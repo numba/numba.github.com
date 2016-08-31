@@ -6,6 +6,8 @@ Numba gives you the power to speed up your applications with high performance fu
 
 Numba works by generating optimized machine code using the LLVM compiler infrastructure at import time, runtime, or statically (using the included pycc tool).  Numba supports compilation of Python to run on either CPU or GPU hardware, and is designed to integrate with the Python scientific software stack.
 
+The Numba project is supported by Continuum Analytics and `The Gordon and Betty Moore Foundation (Grant GBMF5423) <https://www.continuum.io/blog/developer-blog/gordon-and-betty-moore-foundation-grant-numba-and-dask>`_.
+
 Example
 =======
 
