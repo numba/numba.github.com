@@ -24,7 +24,6 @@
     padding-top: 60px;
     padding-bottom: 40px;
   }
-}
 </style>
 
 <link rel="stylesheet" href="_static/css/basicstrap.css" type="text/css" />
@@ -42,7 +41,7 @@
     <script type="text/javascript" src="_static/js/jquery.min.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/js/bootstrap3.min.js"></script>
 <script type="text/javascript" src="_static/js/jquery.cookie.min.js"></script>
 <script type="text/javascript" src="_static/js/basicstrap.js"></script>
@@ -82,7 +81,7 @@
       <!-- row -->
       <div class="row">
          
-<div class="col-md-2 hidden-xs">
+<div class="col-md-2 hidden-xs" id="sidebar-wrapper">
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
 <div class="sidebarblock">
     <center>
@@ -95,10 +94,10 @@
 
 <div class="sidebarblock">
     <h3>Releases</h3>
-    <strong>Stable:</strong> 0.29.0 &ndash; October&nbsp;2016<br/>
+    <strong>Stable:</strong> 0.30.0 &ndash; October&nbsp;2016<br/>
     <a href="download.html">Downloads</a><br>
     <a href="#">Documentation</a><br>
-    <a href="http://numba.pydata.org/numba-doc/0.29.0/release-notes.html">Release Notes</a>
+    <a href="http://numba.pydata.org/numba-doc/0.30.0/release-notes.html">Release Notes</a>
 
     <div>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -139,7 +138,7 @@
 </div> 
         
 
-        <div class="col-md-10">
+        <div class="col-md-10" id="content-wrapper">
           <div class="document" role="main">
             <div class="documentwrapper">
               <div class="bodywrapper">
@@ -151,6 +150,7 @@
 <p><a class="reference external" href="http://numba.pydata.org/numba-doc/latest/index.html">http://numba.pydata.org/numba-doc/latest/index.html</a></p>
 <p>Releases:</p>
 <ul class="simple">
+<li><a class="reference external" href="http://numba.pydata.org/numba-doc/0.30.0/index.html">Version 0.30.0</a></li>
 <li><a class="reference external" href="http://numba.pydata.org/numba-doc/0.29.0/index.html">Version 0.29.0</a></li>
 <li><a class="reference external" href="http://numba.pydata.org/numba-doc/0.28.1/index.html">Version 0.28.1</a></li>
 <li><a class="reference external" href="http://numba.pydata.org/numba-doc/0.27.0/index.html">Version 0.27.0</a></li>
@@ -201,11 +201,12 @@
       <div class="row footer-relbar">
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav ">
         <li><a href="index.html">Home</a></li>
     </ul>
-    <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
-       
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="#">top</a></li> 
       
     </ul>
   </div>
@@ -215,7 +216,7 @@
       <!-- footer -->
       <footer role="contentinfo">
           &copy; Copyright Continuum Analytics (2012).
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.4.1.
       </footer>
       <!-- /footer -->
 
