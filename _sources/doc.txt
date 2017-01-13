@@ -8,6 +8,7 @@ http://numba.pydata.org/numba-doc/latest/index.html
 
 Releases:
 
+* `Version 0.30.1 <http://numba.pydata.org/numba-doc/0.30.1/index.html>`_
 * `Version 0.30.0 <http://numba.pydata.org/numba-doc/0.30.0/index.html>`_
 * `Version 0.29.0 <http://numba.pydata.org/numba-doc/0.29.0/index.html>`_
 * `Version 0.28.1 <http://numba.pydata.org/numba-doc/0.28.1/index.html>`_
