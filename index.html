@@ -24,7 +24,6 @@
     padding-top: 60px;
     padding-bottom: 40px;
   }
-}
 </style>
 
 <link rel="stylesheet" href="_static/css/basicstrap.css" type="text/css" />
@@ -42,12 +41,14 @@
     <script type="text/javascript" src="_static/js/jquery.min.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/js/bootstrap3.min.js"></script>
 <script type="text/javascript" src="_static/js/jquery.cookie.min.js"></script>
 <script type="text/javascript" src="_static/js/basicstrap.js"></script>
 <script type="text/javascript">
 </script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="Numba" href="#" />
     <link rel="next" title="Downloads" href="download.html" /> 
   </head>
@@ -83,7 +84,7 @@
       <!-- row -->
       <div class="row">
          
-<div class="col-md-2 hidden-xs">
+<div class="col-md-2 hidden-xs" id="sidebar-wrapper">
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
 <div class="sidebarblock">
     <center>
@@ -96,10 +97,10 @@
 
 <div class="sidebarblock">
     <h3>Releases</h3>
-    <strong>Stable:</strong> 0.30.1 &ndash; January&nbsp;2017<br/>
+    <strong>Stable:</strong> 0.31.0 &ndash; February&nbsp;2017<br/>
     <a href="download.html">Downloads</a><br>
     <a href="doc.html">Documentation</a><br>
-    <a href="http://numba.pydata.org/numba-doc/0.30.1/release-notes.html">Release Notes</a>
+    <a href="http://numba.pydata.org/numba-doc/0.31.0/release-notes.html">Release Notes</a>
 
     <div>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -140,7 +141,7 @@
 </div> 
         
 
-        <div class="col-md-10">
+        <div class="col-md-10" id="content-wrapper">
           <div class="document" role="main">
             <div class="documentwrapper">
               <div class="bodywrapper">
@@ -153,11 +154,11 @@
 <p>The Numba project is supported by Continuum Analytics and <a class="reference external" href="https://www.continuum.io/blog/developer-blog/gordon-and-betty-moore-foundation-grant-numba-and-dask">The Gordon and Betty Moore Foundation (Grant GBMF5423)</a>.</p>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">jit</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">jit</span>
 <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">arange</span>
 
-<span class="c"># jit decorator tells Numba to compile this function.</span>
-<span class="c"># The argument types will be inferred by Numba when function is called.</span>
+<span class="c1"># jit decorator tells Numba to compile this function.</span>
+<span class="c1"># The argument types will be inferred by Numba when function is called.</span>
 <span class="nd">@jit</span>
 <span class="k">def</span> <span class="nf">sum2d</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="n">M</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
@@ -184,7 +185,7 @@
 <ul class="simple">
 <li>Github: <a class="reference external" href="https://github.com/numba/numba">https://github.com/numba/numba</a></li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git clone git://github.com/numba/numba.git
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ git clone git://github.com/numba/numba.git
 </pre></div>
 </div>
 <p id="install-frontpage">For tarballs see:</p>
@@ -199,11 +200,11 @@
 <p>The easiest way to install numba and get updates is by using the Anaconda
 Distribution: <a class="reference external" href="http://continuum.io/downloads.html">http://continuum.io/downloads.html</a></p>
 <p>If you have Anaconda installed already:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>conda install numba
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ conda install numba
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>conda update numba
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ conda update numba
 </pre></div>
 </div>
 <p>For custom python environments see the <a class="reference external" href="https://github.com/numba/numba#custom-python-environments">README on Github</a>.</p>
@@ -249,11 +250,12 @@ Distribution: <a class="reference external" href="http://continuum.io/downloads.
       <div class="row footer-relbar">
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav ">
         <li><a href="#">Home</a></li>
     </ul>
-    <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
-       
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="#">top</a></li> 
       
     </ul>
   </div>
@@ -263,7 +265,7 @@ Distribution: <a class="reference external" href="http://continuum.io/downloads.
       <!-- footer -->
       <footer role="contentinfo">
           &copy; Copyright Continuum Analytics (2012).
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.1.
       </footer>
       <!-- /footer -->
 
