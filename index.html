@@ -1,280 +1,259 @@
-<!DOCTYPE html>
-
-
-
-
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    
-    <title>Numba &mdash; Numba</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" href="_static/numba-blue-icon-rgb.svg">
 
-    
+    <title>Numba: A High Performance Python Compiler</title>
 
-<link rel="stylesheet" href="_static/css/basicstrap-base.css" type="text/css" />
-<link rel="stylesheet" id="current-theme" href="_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
-<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="_static/css/font-awesome.min.css">
+     <link rel="stylesheet" href="_static/prism-duotone-light.css">
 
-<style type="text/css">
-  body {
-    padding-top: 60px;
-    padding-bottom: 40px;
-  }
-</style>
+    <!-- Custom styles for this template -->
+    <link href="_static/main-page.css" rel="stylesheet">
 
-<link rel="stylesheet" href="_static/css/basicstrap.css" type="text/css" />
-<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-<script type="text/javascript">
-  var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:    './',
-            VERSION:     '0.12.1',
-            COLLAPSE_INDEX: false,
-            FILE_SUFFIX: '.html',
-            HAS_SOURCE:  true
-  };
-</script>
-    <script type="text/javascript" src="_static/js/jquery.min.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="_static/js/bootstrap3.min.js"></script>
-<script type="text/javascript" src="_static/js/jquery.cookie.min.js"></script>
-<script type="text/javascript" src="_static/js/basicstrap.js"></script>
-<script type="text/javascript">
-</script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="Numba" href="#" />
-    <link rel="next" title="Downloads" href="download.html" /> 
   </head>
-  <body role="document">
-    <div class="navbar navbar-fixed-top ">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
+  <body>
 
-          <a class="brand" href="#">Home</a>
-          
-            <a class="brand" href="doc.html">Documentation</a>
-            <a class="brand" href="download.html">Downloads</a>
-          
-          <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-              
-              
-            </ul>
+    <header>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="navbar-brand">
+        <img src="_static/numba-blue-icon-rgb.svg" style="height: 2rem;">
+      </div>
+      <div class="navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="navbar-item"><a class="nav-link" href="http://numba.pydata.org/numba-doc/dev/user/5minguide.html">Learn Numba in 5 minutes</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Documentation
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="http://numba.pydata.org/numba-doc/latest/index.html">Overview</a>
+              <a class="dropdown-item" href="http://numba.pydata.org/numba-doc/latest/user/index.html">User Manual</a>
+              <a class="dropdown-item" href="http://numba.pydata.org/numba-doc/latest/reference/index.html">Reference Manual</a>
+              <a class="dropdown-item" href="http://numba.pydata.org/numba-doc/latest/cuda/index.html">NVIDIA CUDA GPU Programming</a>
+              <a class="dropdown-item" href="http://numba.pydata.org/numba-doc/latest/roc/index.html">AMD ROCm GPU Programming</a>
+              <a class="dropdown-item" href="http://numba.pydata.org/numba-doc/latest/developer/index.html">Developer Manual</a>
+              <a class="dropdown-item" href="http://numba.pydata.org/numba-doc/latest/release-notes.html">Release Notes</a>
+            </div>
+          </li>
+
+          <li class="navbar-item"><a class="nav-link" href="http://numba.pydata.org/numba-doc/dev/user/installing.html">Install</a></li>
+          <li class="navbar-item"><a class="nav-link" href="https://numba.pydata.org/numba-examples/">Examples</a></li>
+          <li class="navbar-item"><a class="nav-link" href="http://numba.pydata.org/numba-doc/dev/user/talks.html">Talks/Tutorials</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Community
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="https://github.com/numba/numba">Github</a>
+              <a class="dropdown-item" href="https://pypi.org/project/numba/">PyPI</a>
+              <a class="dropdown-item" href="https://gitter.im/numba/numba">Gitter Chat</a>
+              <a class="dropdown-item" href="https://groups.google.com/a/continuum.io/forum/#!forum/numba-users">Numba Mailing List</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero position-relative overflow-hidden p-3 text-center text-dark">
+      <div class="col-md-5 p-lg-1 mx-auto my-5">
+        <img src="_static/numba-blue-horizontal-rgb.svg" style="max-width: 30rem;">
+		  <p class="lead font-weight-normal">
+        Numba makes Python code fast
+      </p>
+		  <p class="lead ">
+        Numba is an open source JIT compiler that translates a subset of Python and NumPy code into fast machine code.
+      </p>
+        <a class="btn outline-numba btn-lg" href="http://numba.pydata.org/numba-doc/dev/user/5minguide.html">Learn More</a>
+        <a class="btn filled-numba btn-lg" href="https://mybinder.org/v2/gh/numba/numba-examples/master?filepath=notebooks"
+                      role="button">Try Numba &raquo;</a>
+      </div>
+      <div class="product-device box-shadow d-none d-md-block"></div>
+      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+
+
+    <main role="main">
+
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+      <div class="container marketing p-md-5">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Accelerate Python Functions</h2>
+            <p class="lead">Numba translates Python functions to optimized machine code at runtime using the 
+              industry-standard <a href="https://llvm.org/">LLVM</a> compiler library. Numba-compiled numerical algorithms in Python can approach the speeds of C or FORTRAN.</p>
+            <p class="lead">You don't need to replace the Python interpreter, run a separate compilation step, or even
+              have a C/C++ compiler installed. Just apply one of the Numba decorators to your Python function, and Numba does the rest.
+            </p>
+            <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/user/jit.html" role="button">Learn More &raquo;</a>
+            <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/numba/numba-examples/master?filepath=notebooks%2Fbasics.ipynb" role="button">Try Now &raquo;</a>
+          </div>
+        
+          <div class="col-md-5 code-block">
+            <pre><code class="language-python">from numba import jit
+import random
+
+@jit(nopython=True)
+def monte_carlo_pi(nsamples):
+    acc = 0
+    for i in range(nsamples):
+        x = random.random()
+        y = random.random()
+        if (x**2 + y**2) < 1.0:
+            acc += 1
+    return 4.0 * acc / nsamples</code></pre>
           </div>
         </div>
-      </div>
-    </div>
-    
 
-    <!-- container -->
-    <div class="container-fluid">
+        <hr class="featurette-divider">
 
-      <!-- row -->
-      <div class="row">
-         
-<div class="col-md-2 hidden-xs" id="sidebar-wrapper">
-  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
-<div class="sidebarblock">
-    <center>
-        <a href="#"><img src="_static/numba_blue_icon_rgb.png"/>
-        </a><br/>
-        Sponsored by:<br/>
-        <a href="http://anaconda.com/"><img src="_static/Anaconda_horizontal_RGB_small.png"/></a>
-    </center>
-</div>
-
-<div class="sidebarblock">
-    <h3>Releases</h3>
-    <strong>Stable:</strong> 0.39.0 &ndash; July&nbsp;2018<br/>
-    <a href="download.html">Downloads</a><br>
-    <a href="doc.html">Documentation</a><br>
-    <a href="http://numba.pydata.org/numba-doc/0.39.0/release-notes.html">Release Notes</a>
-
-    <div>
-        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-        <g:plusone size="medium" annotation="none"></g:plusone>
-    </div>
-</div>
-
-<div class="sidebarblock">
-<h3>Links</h3>
-
-  <ul class="simple">
-    <li><a class="reference external" href="https://gitter.im/numba/numba">
-            Gitter Chat</a></li>
-    <li>
-      <a class="reference external" href="https://github.com/numba/numba/issues">
-        Issue Tracker</a>
-    </li>
-    <li><a class="reference external" href="http://numba.pydata.org/numba-benchmark">
-            Benchmark History</a></li>
-    <li>Mailing lists:<br/><span style="padding-left: 1em;">
-        <a class="reference external" href="https://groups.google.com/a/continuum.io/forum/#!forum/numba-users">
-            User</a>
-        </li></span>
-  </ul>
-</div>
-
-<div class="sidebarblock">
-  <h3>Development</h3>
-  <ul class="simple">
-    <li><a class="reference external"
-    href="https://github.com/numba/numba/zipball/master">Download
-  <strong>ZIP File</strong></a></li>
-    <li><a class="reference external"
-    href="https://github.com/numba/numba/tarball/master">Download
-  <strong>TAR Ball</strong></a></li>
-    <li><a class="reference external"
-    href="https://github.com/numba/numba">View on <strong>GitHub</strong></a></li>
-  </ul>
-</div>
-
-  </div>
-</div> 
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Built for Scientific Computing</h2>
+            <p class="lead">Numba is designed to be used with NumPy arrays and functions.  Numba generates specialized code for
+              different array data types and layouts to optimize performance.  Special decorators can create <a href="https://docs.scipy.org/doc/numpy/reference/ufuncs.html">universal functions</a> that broadcast over NumPy arrays just like NumPy functions do.</p>
+            <p class="lead">Numba also works great with Jupyter notebooks for interactive computing, and with distributed execution frameworks, like Dask and Spark.</p>
+            <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/reference/numpysupported.html" role="button">Learn More &raquo;</a>
+            <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/numba/numba-examples/master?filepath=notebooks%2Fnumpy.ipynb" role="button">Try Now &raquo;</a>
+          </div>
         
+          <div class="col-md-5 code-block">
+            <pre><code class="language-python">@numba.jit(nopython=True, parallel=True)
+def logistic_regression(Y, X, w, iterations):
+    for i in range(iterations):
+        w -= np.dot(((1.0 /
+              (1.0 + np.exp(-Y * np.dot(X, w)))
+              - 1.0) * Y), X)
+    return w</code></pre>        
+          </div>
+        </div>
 
-        <div class="col-md-10" id="content-wrapper">
-          <div class="document" role="main">
-            <div class="documentwrapper">
-              <div class="bodywrapper">
-                <div class="body">
-                  
-  <div class="section" id="numba">
-<h1>Numba<a class="headerlink" href="#numba" title="Permalink to this headline">¶</a></h1>
-<p>Numba gives you the power to speed up your applications with high performance functions written directly in Python.  With a few annotations, array-oriented and math-heavy Python code can be just-in-time compiled to native machine instructions, similar in performance to C, C++ and Fortran, without having to switch languages or Python interpreters.</p>
-<p>Numba works by generating optimized machine code using the LLVM compiler infrastructure at import time, runtime, or statically (using the included pycc tool).  Numba supports compilation of Python to run on either CPU or GPU hardware, and is designed to integrate with the Python scientific software stack.</p>
-<p>The Numba project is supported by Anaconda, Inc. (formerly known as Continuum Analytics) and <a class="reference external" href="https://www.moore.org/grant-detail?grantId=GBMF5423">The Gordon and Betty Moore Foundation (Grant GBMF5423)</a>.</p>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">jit</span>
-<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">arange</span>
+        <hr class="featurette-divider">
 
-<span class="c1"># jit decorator tells Numba to compile this function.</span>
-<span class="c1"># The argument types will be inferred by Numba when function is called.</span>
-<span class="nd">@jit</span>
-<span class="k">def</span> <span class="nf">sum2d</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-    <span class="n">M</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="mf">0.0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-            <span class="n">result</span> <span class="o">+=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">result</span>
+        <div class="row featurette">
+        <h2 class="featurette-heading">Parallelize Your Algorithms</h2>
+        <p>Numba offers a range of options for parallelizing your code for CPUs and GPUs, often with only minor code changes.</p>
+        <div class="row">
 
-<span class="n">a</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sum2d</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-</pre></div>
-</div>
-<p>More examples: <a class="reference external" href="http://numba.pydata.org/numba-doc/dev/user/examples.html">examples</a>.</p>
-</div>
-<div class="section" id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="http://numba.pydata.org/doc.html">http://numba.pydata.org/doc.html</a></li>
-</ul>
-</div>
-<div class="section" id="source-and-downloads">
-<h2>Source and Downloads<a class="headerlink" href="#source-and-downloads" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Github: <a class="reference external" href="https://github.com/numba/numba">https://github.com/numba/numba</a></li>
-</ul>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ git clone git://github.com/numba/numba.git
-</pre></div>
-</div>
-<p id="install-frontpage">For tarballs see:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="download.html">Downloads</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="installing">
-<h2>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h2>
-<p>The easiest way to install numba and get updates is by using the Anaconda
-Distribution: <a class="reference external" href="http://anaconda.com/downloads.html">http://anaconda.com/downloads.html</a></p>
-<p>If you have Anaconda installed already:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ conda install numba
-</pre></div>
-</div>
-<p>or</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ conda update numba
-</pre></div>
-</div>
-<p>For custom python environments see the <a class="reference external" href="https://github.com/numba/numba#custom-python-environments">README on Github</a>.</p>
-</div>
-<div class="section" id="mailing-lists">
-<h2>Mailing Lists<a class="headerlink" href="#mailing-lists" title="Permalink to this headline">¶</a></h2>
-<p>Join the numba mailing list <a class="reference external" href="mailto:numba-users&#37;&#52;&#48;continuum&#46;io">numba-users<span>&#64;</span>continuum<span>&#46;</span>io</a> :</p>
-<ul class="simple">
-<li><a class="reference external" href="https://groups.google.com/a/continuum.io/d/forum/numba-users">https://groups.google.com/a/continuum.io/d/forum/numba-users</a></li>
-</ul>
-<p>Some old archives are at:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://librelist.com/browser/numba/">http://librelist.com/browser/numba/</a></li>
-</ul>
-</div>
-<div class="section" id="website">
-<h2>Website<a class="headerlink" href="#website" title="Permalink to this headline">¶</a></h2>
-<p>See if our sponsor can help you (which can help this project):</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.anaconda.com">http://www.anaconda.com</a></li>
-<li><a class="reference external" href="http://numba.pydata.org">http://numba.pydata.org</a></li>
-</ul>
-</div>
-<div class="section" id="continuous-integration">
-<h2>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="https://travis-ci.org/numba/numba">https://travis-ci.org/numba/numba</a></li>
-</ul>
-</div>
-</div>
+          <div class="col-lg-4">
+            <h2 class="mt-3">Simplified Threading</h2>
+            <pre><code class="language-python">@jit(nopython=True, parallel=True)
+def simulator(out):
+    # iterate loop in parallel
+    for i in prange(out.shape[0]):
+        out[i] = run_sim()</code></pre>
+            <p>Numba can automatically execute NumPy array expressions on multiple CPU cores and makes it easy to write parallel loops.</p>
+            <p>
+              <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/user/parallel.html" role="button">Learn More &raquo;</a>
+              <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/numba/numba-examples/master?filepath=notebooks%2Fthreads.ipynb" role="button">Try Now &raquo;</a>
+            </p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <h2 class="mt-3">SIMD Vectorization</h2>
+            <pre><code class="language-nasm">LBB0_8:
+	vmovups	(%rax,%rdx,4), %ymm0
+	vmovups	(%rcx,%rdx,4), %ymm1
+	vsubps	%ymm1, %ymm0, %ymm2
+	vaddps	%ymm2, %ymm2, %ymm2</code></pre>
+            <p>Numba can automatically translate some loops into vector instructions for 2-4x speed improvements.  Numba adapts to your CPU capabilities, whether your CPU supports SSE, AVX, or AVX-512.</p>
+            <p>
+              <a class="btn btn-outline-secondary" href="" role="button">Learn More &raquo;</a>
+              <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/numba/numba-examples/master?filepath=notebooks%2Fsimd.ipynb" role="button">Try Now &raquo;</a>
+            </p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <h2 class="mt-3">GPU Acceleration</h2>
+            <img src="_static/nvidia_cuda.jpg" class="top-image">
+            <img src="_static/amd_rocm.png" class="top-image">
+            <p>With support for both NVIDIA's CUDA and AMD's ROCm drivers, Numba lets you write parallel GPU algorithms entirely from Python.</p>
+            <p>
+              <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/cuda/index.html" role="button">Numba CUDA &raquo;</a>
+              <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/roc/index.html" role="button">Numba ROCm &raquo;</a>
+            </p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        </div>
+        
+        <hr class="featurette-divider">
 
+        <div class="row featurette">
+          <div class="col-md-12">
+            <h2 class="featurette-heading">Portable Compilation</h2>
+            <p class="lead">Ship high performance Python applications without the headache of binary compilation and packaging.  Your source code remains pure Python while Numba handles the compilation at runtime.  We test Numba continuously in more than 200 different platform configurations.</p>
+            <p class="lead">Numba supports Intel and AMD x86, POWER8/9, and ARM CPUs, NVIDIA and  AMD GPUs, Python 2.7 and 3.4-3.7, as well as Windows/macOS/Linux.  Precompiled Numba binaries for most systems are available as conda packages and pip-installable wheels.</p>
+            <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/user/installing.html" role="button">Learn More &raquo;</a>
+          </div>
 
-                </div>
-              </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <section id="supporters">
+
+        <div class="container supporters">
+          <h2>Acknowledgements</h2>
+          <p>Numba development is made possible through the current and/or past support of a number of organizations:<p>
+          <div class="row">
+            <div class="col supporter">
+              <a href="https://anaconda.com"><img src="_static/anaconda_logo.png"></a>
+            </div>
+            <div class="col supporter">
+              <a href="https://www.darpa.mil"><img src="_static/darpa_logo.png"></a>
+            </div>
+            <div class="col supporter">
+              <a href="https://www.moore.org/grant-detail?grantId=GBMF5423"><img src="_static/moore_logo.png"></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col supporter">
+              <a href="https://www.intel.com"><img src="_static/intel_logo.png"></a>
+            </div>
+            <div class="col supporter">
+              <a href="https://www.nvidia.com/"><img src="_static/nvidia_logo.png"></a>
+            </div>
+            <div class="col supporter">
+              <a href="https://www.amd.com"><img src="_static/amd_logo.png"></a>
             </div>
           </div>
         </div>
-        
-        
-      </div><!-- /row -->
+      </section>
 
-      <!-- row -->
-      <div class="row footer-relbar">
-<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
-  <div class="navbar-inner">
-    <ul class="nav navbar-nav ">
-        <li><a href="#">Home</a></li>
-    </ul>
-<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
-      
-        <li><a href="#">top</a></li> 
-      
-    </ul>
-  </div>
-</div>
-      </div><!-- /row -->
+        <!-- /END THE FEATURETTES -->
 
-      <!-- footer -->
-      <footer role="contentinfo">
-          &copy; Copyright Anaconda, Inc (2017).
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.
+      <!-- FOOTER -->
+      <footer class="container">
+        <p>&copy; 2018 Anaconda</p>
+        <p><i>HTML layout adapted from the <a href="http://dask.pydata.org/">Dask</a> homepage.</i></p>
       </footer>
-      <!-- /footer -->
+    </main>
 
-    </div>
-    <!-- /container -->
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+              integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+              crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+      <!-- Code highlighting -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-python.min.js"></script>
 
   </body>
 </html>
