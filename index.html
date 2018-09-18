@@ -33,7 +33,7 @@
       </div>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="navbar-item"><a class="nav-link" href="http://numba.pydata.org/numba-doc/dev/user/5minguide.html">Learn Numba in 5 minutes</a></li>
+          <li class="navbar-item"><a class="nav-link" href="http://numba.pydata.org/numba-doc/latest/user/5minguide.html">Learn Numba in 5 minutes</a></li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,9 +50,9 @@
             </div>
           </li>
 
-          <li class="navbar-item"><a class="nav-link" href="http://numba.pydata.org/numba-doc/dev/user/installing.html">Install</a></li>
+          <li class="navbar-item"><a class="nav-link" href="http://numba.pydata.org/numba-doc/latest/user/installing.html">Install</a></li>
           <li class="navbar-item"><a class="nav-link" href="https://numba.pydata.org/numba-examples/">Examples</a></li>
-          <li class="navbar-item"><a class="nav-link" href="http://numba.pydata.org/numba-doc/dev/user/talks.html">Talks/Tutorials</a></li>
+          <li class="navbar-item"><a class="nav-link" href="http://numba.pydata.org/numba-doc/latest/user/talks.html">Talks/Tutorials</a></li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -79,7 +79,7 @@
 		  <p class="lead ">
         Numba is an open source JIT compiler that translates a subset of Python and NumPy code into fast machine code.
       </p>
-        <a class="btn outline-numba btn-lg" href="http://numba.pydata.org/numba-doc/dev/user/5minguide.html">Learn More</a>
+        <a class="btn outline-numba btn-lg" href="http://numba.pydata.org/numba-doc/latest/user/5minguide.html">Learn More</a>
         <a class="btn filled-numba btn-lg" href="https://mybinder.org/v2/gh/numba/numba-examples/master?filepath=notebooks"
                       role="button">Try Numba &raquo;</a>
       </div>
@@ -101,7 +101,7 @@
             <p class="lead">You don't need to replace the Python interpreter, run a separate compilation step, or even
               have a C/C++ compiler installed. Just apply one of the Numba decorators to your Python function, and Numba does the rest.
             </p>
-            <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/user/jit.html" role="button">Learn More &raquo;</a>
+            <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/latest/user/jit.html" role="button">Learn More &raquo;</a>
             <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/numba/numba-examples/master?filepath=notebooks%2Fbasics.ipynb" role="button">Try Now &raquo;</a>
           </div>
         
@@ -129,7 +129,7 @@ def monte_carlo_pi(nsamples):
             <p class="lead">Numba is designed to be used with NumPy arrays and functions.  Numba generates specialized code for
               different array data types and layouts to optimize performance.  Special decorators can create <a href="https://docs.scipy.org/doc/numpy/reference/ufuncs.html">universal functions</a> that broadcast over NumPy arrays just like NumPy functions do.</p>
             <p class="lead">Numba also works great with Jupyter notebooks for interactive computing, and with distributed execution frameworks, like Dask and Spark.</p>
-            <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/reference/numpysupported.html" role="button">Learn More &raquo;</a>
+            <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/latest/reference/numpysupported.html" role="button">Learn More &raquo;</a>
             <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/numba/numba-examples/master?filepath=notebooks%2Fnumpy.ipynb" role="button">Try Now &raquo;</a>
           </div>
         
@@ -160,7 +160,7 @@ def simulator(out):
         out[i] = run_sim()</code></pre>
             <p>Numba can automatically execute NumPy array expressions on multiple CPU cores and makes it easy to write parallel loops.</p>
             <p>
-              <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/user/parallel.html" role="button">Learn More &raquo;</a>
+              <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/latest/user/parallel.html" role="button">Learn More &raquo;</a>
               <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/numba/numba-examples/master?filepath=notebooks%2Fthreads.ipynb" role="button">Try Now &raquo;</a>
             </p>
           </div><!-- /.col-lg-4 -->
@@ -183,8 +183,8 @@ def simulator(out):
             <img src="_static/amd_rocm.png" class="top-image">
             <p>With support for both NVIDIA's CUDA and AMD's ROCm drivers, Numba lets you write parallel GPU algorithms entirely from Python.</p>
             <p>
-              <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/cuda/index.html" role="button">Numba CUDA &raquo;</a>
-              <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/roc/index.html" role="button">Numba ROCm &raquo;</a>
+              <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/latest/cuda/index.html" role="button">Numba CUDA &raquo;</a>
+              <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/latest/roc/index.html" role="button">Numba ROCm &raquo;</a>
             </p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
@@ -197,7 +197,7 @@ def simulator(out):
             <h2 class="featurette-heading">Portable Compilation</h2>
             <p class="lead">Ship high performance Python applications without the headache of binary compilation and packaging.  Your source code remains pure Python while Numba handles the compilation at runtime.  We test Numba continuously in more than 200 different platform configurations.</p>
             <p class="lead">Numba supports Intel and AMD x86, POWER8/9, and ARM CPUs, NVIDIA and  AMD GPUs, Python 2.7 and 3.4-3.7, as well as Windows/macOS/Linux.  Precompiled Numba binaries for most systems are available as conda packages and pip-installable wheels.</p>
-            <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/dev/user/installing.html" role="button">Learn More &raquo;</a>
+            <a class="btn btn-outline-secondary" href="http://numba.pydata.org/numba-doc/latest/user/installing.html" role="button">Learn More &raquo;</a>
           </div>
 
       </div>
