@@ -109,7 +109,7 @@
             <pre><code class="language-python">from numba import jit
 import random
 
-@jit(nopython=True)
+@jit
 def monte_carlo_pi(nsamples):
     acc = 0
     for i in range(nsamples):
@@ -134,7 +134,7 @@ def monte_carlo_pi(nsamples):
           </div>
 
           <div class="col-md-5 code-block">
-            <pre><code class="language-python">@numba.jit(nopython=True, parallel=True)
+            <pre><code class="language-python">@njit(parallel=True)
 def logistic_regression(Y, X, w, iterations):
     for i in range(iterations):
         w -= np.dot(((1.0 /
@@ -153,7 +153,7 @@ def logistic_regression(Y, X, w, iterations):
 
           <div class="col-lg-4">
             <h2 class="mt-3">Simplified Threading</h2>
-            <pre><code class="language-python">@jit(nopython=True, parallel=True)
+            <pre><code class="language-python">@njit( parallel=True)
 def simulator(out):
     # iterate loop in parallel
     for i in prange(out.shape[0]):
