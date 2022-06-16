@@ -109,7 +109,7 @@
             <pre><code class="language-python">from numba import jit
 import random
 
-@jit
+@njit
 def monte_carlo_pi(nsamples):
     acc = 0
     for i in range(nsamples):
