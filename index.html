@@ -155,7 +155,7 @@ def logistic_regression(Y, X, w, iterations):
 
           <div class="col-lg-4">
             <h2 class="mt-3">Simplified Threading</h2>
-            <pre><code class="language-python">@njit( parallel=True)
+            <pre><code class="language-python">@njit(parallel=True)
 def simulator(out):
     # iterate loop in parallel
     for i in prange(out.shape[0]):
